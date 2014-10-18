@@ -46,8 +46,7 @@ if !has('gui_running') && $TERM_PROGRAM == 'Apple_Terminal'
   colorscheme solarized
 endif
 
-"let g:rspec_command='! zeus rspec {spec}'
-let g:rspec_command='! bin/rspec {spec}'
+let g:rspec_command='bin/rspec {spec}'
 let coffee_lint_options='-f config/coffeelint.json'
 
 " vim-rspec mappings
