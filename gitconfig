@@ -1,0 +1,25 @@
+[user]
+  name = Jerry Busser
+  email = jerry.busser@gmail.com
+[alias]
+  ci = commit -v
+  co = checkout
+  st = status
+[credential]
+  helper = osxkeychain
+[color]
+  ui = auto
+[fetch]
+  prune = true
+[push]
+  default = current
+[init]
+  templatedir = ~/.git_template
+[diff]
+  tool = mvimdiff
+[difftool "mvimdiff"]
+  cmd = mvim -f -d \"$LOCAL\" \"$REMOTE\"
+[alias]
+  ctags = !.git/hooks/ctags
+[core]
+  editor = /Applications/MacVim.app/Contents/MacOS/Vim
