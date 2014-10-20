@@ -35,8 +35,10 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias gco='git checkout'
-alias gfp='git fetch --prune'
+alias gco='git co'
+alias gci='git ci'
+alias gd='git diff'
+alias gf='git fetch'
 alias gs='git status'
 alias gm='git merge'
 
