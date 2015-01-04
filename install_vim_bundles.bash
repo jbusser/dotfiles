@@ -10,7 +10,7 @@ bundles=('ctrlp.vim' 'vim-coffee-script' 'vim-endwise' 'vim-rails' 'vim-ruby'
 'dash.vim' 'vim-colors-solarized' 'vim-eunuch' 'vim-rake' 'vim-slim' 'vim-bundler'
 'vim-emblem' 'vim-fugitive' 'vim-rspec' 'vim-surround')
 
-repos=('kien/ctrlp.vim' 'kchmck/vim-coffee-script' 'tpope/vim-endwise'
+repos=('ctrlpvim/ctrlp.vim' 'kchmck/vim-coffee-script' 'tpope/vim-endwise'
 'tpope/vim-rails' 'vim-ruby/vim-ruby' '' 'altercation/vim-colors-solarized'
 'tpope/vim-eunuch' 'tpope/vim-rake' 'slim-template/vim-slim' 'tpope/vim-bundler'
 'heartsentwined/vim-emblem' 'tpope/vim-fugitive' 'tpope/vim-rspec'
