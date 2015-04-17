@@ -21,5 +21,6 @@
   cmd = mvim -f -d \"$LOCAL\" \"$REMOTE\"
 [alias]
   ctags = !.git/hooks/ctags
+	rom = rebase -i origin/master
 [core]
   editor = /Applications/MacVim.app/Contents/MacOS/Vim
