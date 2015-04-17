@@ -49,6 +49,8 @@ alias gp='git push'
 
 alias rk='bin/rake'
 
+alias reportdb='heroku pg:psql HEROKU_POSTGRESQL_AQUA --app thinkcerca'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
