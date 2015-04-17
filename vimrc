@@ -1,5 +1,6 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-" Bundle: tpope/vim-pathogen
+" Bundle: 'tpope/vim-pathogen'
+" Bundle: 'bling/vim-airline'
 " Bundle: 'ctrlpvim/ctrlp.vim'
 " Bundle: 'rizzatti/dash.vim'
 " Bundle: 'tpope/vim-bundler'
@@ -16,14 +17,12 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Bundle: 'vim-ruby/vim-ruby'
 " Bundle: 'slim-template/vim-slim'
 " Bundle: 'tpope/vim-surround'
-" call pathogen#infect()
-execute pathogen#infect()
+call pathogen#infect()
 execute pathogen#helptags()
 " enhances % matcher to include ruby keywords
 runtime macros/matchit.vim
 set nocompatible
 set nobackup
-
 
 "syntax on
 filetype on
@@ -54,6 +53,9 @@ set textwidth=90
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%y%=%-14.(%l,%c%V%)\ %P
 
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
 " ------------------------------------------------------------------
 " Solarized Colorscheme Config
 " ------------------------------------------------------------------
@@ -69,8 +71,14 @@ endif
 
 colorscheme solarized
 
+let ruby_operators = 1
+
+let g:sql_type_default = 'postgresql'
+
 let g:rspec_command='!rspec {spec}'
 let coffee_lint_options='-f config/coffeelint.json'
+
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " vim-rspec mappings
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
