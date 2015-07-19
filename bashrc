@@ -33,23 +33,21 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias gco='git co'
-alias gci='git ci'
-alias gd='git diff'
-alias gf='git fetch'
-alias gl='git log'
-alias gs='git status'
-alias gm='git merge'
-alias gp='git push'
+g() {
+  if [ $# -gt 0 ]; then
+    git "$@"
+  else
+    git status --short
+  fi
+}
 
 alias rk='bin/rake'
 
-alias reportdb='heroku pg:psql HEROKU_POSTGRESQL_AQUA --app thinkcerca'
+alias reportdb='heroku pg:psql HEROKU_POSTGRESQL_TEAL --app thinkcerca'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

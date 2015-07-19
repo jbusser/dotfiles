@@ -4,7 +4,15 @@
 [alias]
   ci = commit -v
   co = checkout
-  st = status
+  ctags = !.git/hooks/ctags
+  d = diff
+  f = fetch
+  lo = log --oneline --decorate
+  m = merge
+  p = push
+  pf = push --force
+  rom = rebase -i origin/master
+  s = status
 [credential]
   helper = osxkeychain
 [color]
@@ -19,8 +27,5 @@
   tool = mvimdiff
 [difftool "mvimdiff"]
   cmd = mvim -f -d \"$LOCAL\" \"$REMOTE\"
-[alias]
-  ctags = !.git/hooks/ctags
-	rom = rebase -i origin/master
 [core]
   editor = /Applications/MacVim.app/Contents/MacOS/Vim
