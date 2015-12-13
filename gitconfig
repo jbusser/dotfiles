@@ -2,12 +2,13 @@
   name = Jerry Busser
   email = jerry.busser@gmail.com
 [alias]
+  bd = branch -D
   ci = commit -v
   co = checkout
   ctags = !.git/hooks/ctags
   d = diff
   f = fetch
-  lo = log --oneline --decorate
+  l = log --oneline --decorate
   m = merge
   p = push
   pf = push --force
@@ -29,3 +30,5 @@
   cmd = mvim -f -d \"$LOCAL\" \"$REMOTE\"
 [core]
   editor = /Applications/MacVim.app/Contents/MacOS/Vim
+[heroku]
+  account = personal

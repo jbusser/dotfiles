@@ -1,24 +1,24 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-" Bundle: 'tpope/vim-pathogen'
+" Bundle: 'altercation/vim-colors-solarized'
 " Bundle: 'bling/vim-airline'
 " Bundle: 'ctrlpvim/ctrlp.vim'
-" Bundle: 'rizzatti/dash.vim'
-" Bundle: 'tpope/vim-bundler'
 " Bundle: 'kchmck/vim-coffee-script'
-" Bundle: 'altercation/vim-colors-solarized'
 " Bundle: 'kxcrl/vim-emblem'
+" Bundle: 'rizzatti/dash.vim'
+" Bundle: 'slim-template/vim-slim'
+" Bundle: 'thoughtbot/vim-rspec'
+" Bundle: 'tpope/vim-bundler'
 " Bundle: 'tpope/vim-commentary'
 " Bundle: 'tpope/vim-endwise'
 " Bundle: 'tpope/vim-eunuch'
 " Bundle: 'tpope/vim-fugitive'
+" Bundle: 'tpope/vim-pathogen'
 " Bundle: 'tpope/vim-rails'
 " Bundle: 'tpope/vim-rake'
-" Bundle: 'tpope/vim-unimpaired'
-" Bundle: 'thoughtbot/vim-rspec'
-" Bundle: 'vim-ruby/vim-ruby'
-" Bundle: 'slim-template/vim-slim'
 " Bundle: 'tpope/vim-surround'
-call pathogen#infect()
+" Bundle: 'tpope/vim-unimpaired'
+" Bundle: 'vim-ruby/vim-ruby'
+execute pathogen#infect()
 execute pathogen#helptags()
 " enhances % matcher to include ruby keywords
 runtime macros/matchit.vim
@@ -47,7 +47,8 @@ set hlsearch
 set splitbelow
 set splitright
 
-set textwidth=90
+set textwidth=80
+set colorcolumn=+1
 
 " Include Git branch and revision on status line courtesy of
 " Fugitive.vim
@@ -80,6 +81,16 @@ let g:rspec_command='!rspec {spec}'
 let coffee_lint_options='-f config/coffeelint.json'
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+ab dbg debugger
+
+" ------------------------------------------------------------------
+"  Undo
+" ------------------------------------------------------------------
+set undofile
+set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undoreload=10000
 
 " vim-rspec mappings
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>

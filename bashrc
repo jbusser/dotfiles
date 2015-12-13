@@ -36,6 +36,9 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias rk='bin/rake'
+alias reportdb='heroku pg:psql HEROKU_POSTGRESQL_TEAL --app thinkcerca'
+alias rebinstub='bundle exec rake rails:update:bin && bundle exec spring binstub --all'
 
 g() {
   if [ $# -gt 0 ]; then
@@ -44,10 +47,6 @@ g() {
     git status --short
   fi
 }
-
-alias rk='bin/rake'
-
-alias reportdb='heroku pg:psql HEROKU_POSTGRESQL_TEAL --app thinkcerca'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -63,5 +62,6 @@ then
   elif [ -f $(brew --prefix)/etc/bash_completion ];
   then
     . $(brew --prefix)/etc/bash_completion
+    __git_complete g __git_main
   fi
 fi
