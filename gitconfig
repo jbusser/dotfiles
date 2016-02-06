@@ -13,7 +13,11 @@
   p = push
   pf = push --force
   rom = rebase -i origin/master
+  ros = rebase -i origin/stage
+  rc = rebase --continue
   s = status
+  upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
+  ureset = !git upstream && git reset --hard $(git upstream)
 [credential]
   helper = osxkeychain
 [color]
