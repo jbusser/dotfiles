@@ -39,6 +39,7 @@ alias l='ls -CF'
 alias rk='bin/rake'
 alias reportdb='heroku pg:psql HEROKU_POSTGRESQL_TEAL --app thinkcerca'
 alias rebinstub='bundle exec rake rails:update:bin && bundle exec spring binstub --all'
+alias v='vim'
 
 g() {
   if [ $# -gt 0 ]; then
