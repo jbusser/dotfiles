@@ -1,6 +1,7 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Bundle: 'altercation/vim-colors-solarized'
-" Bundle: 'bling/vim-airline'
+" Bundle: 'vim-airline/vim-airline'
+" Bundle: 'vim-airline/vim-airline-themes'
 " Bundle: 'ctrlpvim/ctrlp.vim'
 " Bundle: 'guns/vim-sexp'
 " Bundle: 'kchmck/vim-coffee-script'
@@ -12,6 +13,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Bundle: 'tpope/vim-commentary'
 " Bundle: 'tpope/vim-endwise'
 " Bundle: 'tpope/vim-eunuch'
+" Bundle: 'tpope/vim-fireplace'
 " Bundle: 'tpope/vim-fugitive'
 " Bundle: 'tpope/vim-pathogen'
 " Bundle: 'tpope/vim-rails'
