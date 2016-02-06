@@ -2,6 +2,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Bundle: 'altercation/vim-colors-solarized'
 " Bundle: 'bling/vim-airline'
 " Bundle: 'ctrlpvim/ctrlp.vim'
+" Bundle: 'guns/vim-sexp'
 " Bundle: 'kchmck/vim-coffee-script'
 " Bundle: 'kxcrl/vim-emblem'
 " Bundle: 'rizzatti/dash.vim'
@@ -15,6 +16,8 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Bundle: 'tpope/vim-pathogen'
 " Bundle: 'tpope/vim-rails'
 " Bundle: 'tpope/vim-rake'
+" Bundle: 'tpope/vim-repeat'
+" Bundle: 'tpope/vim-sexp-mappings-for-regular-people'
 " Bundle: 'tpope/vim-surround'
 " Bundle: 'tpope/vim-unimpaired'
 " Bundle: 'vim-ruby/vim-ruby'
@@ -78,9 +81,9 @@ let ruby_operators = 1
 let g:sql_type_default = 'postgresql'
 
 let g:rspec_command='!rspec {spec}'
-let coffee_lint_options='-f config/coffeelint.json'
+let coffee_lint_options='-f .coffeelint.json'
 
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_user_command=['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 ab dbg debugger
 
