@@ -1,0 +1,1 @@
+alias reportdb='heroku pg:psql HEROKU_POSTGRESQL_TEAL --app thinkcerca'
