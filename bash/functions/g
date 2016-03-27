@@ -5,3 +5,6 @@ g() {
     git status --short
   fi
 }
+
+# __git_complete defined in bash-git-prompt
+$(type __git_complete >/dev/null 2>&1) && __git_complete g __git_main
