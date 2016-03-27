@@ -3,9 +3,6 @@ then
   . "${HOME}/.bashrc_local"
 fi
 
-# include staged/unstaged status in PS1
-GIT_PS1_SHOWDIRTYSTATE=1
-
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -41,13 +38,6 @@ alias reportdb='heroku pg:psql HEROKU_POSTGRESQL_TEAL --app thinkcerca'
 alias rebinstub='bundle exec rake rails:update:bin && bundle exec spring binstub --all'
 alias v='vim'
 
-g() {
-  if [ $# -gt 0 ]; then
-    git "$@"
-  else
-    git status --short
-  fi
-}
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -66,3 +56,11 @@ then
     __git_complete g __git_main
   fi
 fi
+
+for function in ~/.bash/functions/*; do
+  source $function
+done
+
+for config in ~/.bash/configs/*; do
+  . $config
+done
