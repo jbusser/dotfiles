@@ -9,9 +9,10 @@
   d = diff
   f = fetch
   l = log --oneline --decorate
+  lrc = log --oneline --format='%s'
   m = merge
   p = push
-  pf = push --force
+  pf = push --force-with-lease
   rom = rebase -i origin/master
   ros = rebase -i origin/stage
   rc = rebase --continue
@@ -33,6 +34,7 @@
 [difftool "mvimdiff"]
   cmd = mvim -f -d \"$LOCAL\" \"$REMOTE\"
 [core]
-  editor = /Applications/MacVim.app/Contents/MacOS/Vim
+  editor = /usr/local/bin/vim
+  excludesfile = /Users/jbusser/.gitignore_global
 [heroku]
   account = personal
