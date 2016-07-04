@@ -1,0 +1,20 @@
+hp() {
+  app=${1-"d"}
+  db="DATABASE_URL"
+  suffix="-dev"
+
+  if [[ $app == "s" ]]; then
+    suffix="-stage"
+  fi
+
+  if [[ $app == "p" ]]; then
+    suffix=""
+  fi
+
+  if [[ $app == "rpt" ]]; then
+    suffix=""
+    db="HEROKU_POSTGRESQL_TEAL"
+  fi
+
+  heroku pg:psql $db --app thinkcerca${suffix}
+}

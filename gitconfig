@@ -3,6 +3,7 @@
   email = jerry.busser@gmail.com
 [alias]
   bd = branch -D
+  ca = commit --amend
   ci = commit -v
   co = checkout
   ctags = !.git/hooks/ctags
@@ -17,6 +18,7 @@
   ros = rebase -i origin/stage
   rc = rebase --continue
   s = status
+  stahs = stash
   upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
   ureset = !git upstream && git reset --hard $(git upstream)
 [credential]

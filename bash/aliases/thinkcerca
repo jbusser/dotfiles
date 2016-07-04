@@ -1,1 +1,6 @@
+alias proddb='heroku pg:psql --app thinkcerca'
 alias reportdb='heroku pg:psql HEROKU_POSTGRESQL_TEAL --app thinkcerca'
+alias rdsf='rake db:seed_fu'
+alias rft='rake frontend:test'
+alias rss='rake sunspot:solr:start'
+alias stagedb='heroku pg:psql --app thinkcerca-stage'

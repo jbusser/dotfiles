@@ -1,0 +1,3 @@
+rtg() {
+  rake -T | grep ${1}
+}

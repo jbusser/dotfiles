@@ -1,0 +1,52 @@
+heroku_remote() {
+  local app=${1-"d"}
+  local remote="dev"
+
+  if [[ $app == "s" ]]; then
+    remote="stage"
+  fi
+
+  if [[ $app == "p" || $app == "rpt" ]]; then
+    remote="prod"
+  fi
+
+  echo "--remote ${remote}"
+}
+
+heroku_run_rails_c() {
+  echo "run rails c $(heroku_remote $1)"
+}
+
+heroku_run() {
+  echo "run ${@:1:$(($# - 1))} $(heroku_remote ${@:- 1})"
+}
+
+heroku_psql() {
+  local db="DATABASE_URL"
+  if [[ $1 == "rpt" ]]; then
+    db="HEROKU_POSTGRESQL_TEAL"
+  fi
+
+  echo "pg:psql $db $(heroku_remote $1)"
+}
+
+h() {
+  local subcommand=""
+  if [[ $1 == "p" ]]; then
+    subcommand=$(heroku_psql "${@:2}")
+  fi
+
+  if [[ $1 == "r" ]]; then
+    subcommand=$(heroku_run "${@:2}")
+  fi
+
+  if [[ $1 == "rc" ]]; then
+    subcommand=$(heroku_run_rails_c "${@:2}")
+  fi
+
+  if [[ $subcommand ]]; then
+    heroku $subcommand
+  else
+    heroku $@
+  fi
+}

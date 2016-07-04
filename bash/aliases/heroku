@@ -1,0 +1,1 @@
+alias hrc='heroku run rails c --app'
