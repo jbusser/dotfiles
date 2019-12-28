@@ -3,7 +3,7 @@ then
   . "${HOME}/.bashrc_local"
 fi
 
-if [ ${BASH_VERSINFO[0]} == 4 ];
+if [ ${BASH_VERSINFO[0]} == 5 ];
 then
   shopt -s autocd
   shopt -s dirspell
