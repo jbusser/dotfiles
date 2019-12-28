@@ -3,6 +3,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Bundle: 'vim-airline/vim-airline'
 " Bundle: 'vim-airline/vim-airline-themes'
 " Bundle: 'ctrlpvim/ctrlp.vim'
+" Bundle: 'elzr/vim-json'
 " Bundle: 'guns/vim-sexp'
 " Bundle: 'kchmck/vim-coffee-script'
 " Bundle: 'kxcrl/vim-emblem'

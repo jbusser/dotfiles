@@ -1,13 +1,3 @@
-if ! shopt -oq posix;
-then
-  if [ -f /usr/share/bash-completion/bash_completion ];
-  then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ];
-  then
-    . /etc/bash_completion
-  elif [ -f $(brew --prefix)/etc/bash_completion ];
-  then
-    . $(brew --prefix)/etc/bash_completion
-  fi
-fi
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"

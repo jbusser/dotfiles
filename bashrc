@@ -3,6 +3,10 @@ then
   . "${HOME}/.bashrc_local"
 fi
 
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
 if [ ${BASH_VERSINFO[0]} == 5 ];
 then
   shopt -s autocd
